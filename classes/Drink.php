@@ -17,6 +17,12 @@ class Drink implements DrinkInterface
     /** @var  string */
     protected $name;
 
+    /** @var  string */
+    protected $desc;
+
+    /** @var  string */
+    protected $price;
+
     /**
      * @param string $name
      * @return void
@@ -27,12 +33,43 @@ class Drink implements DrinkInterface
     }
 
     /**
-     * @param string $name
      * @return void
      */
-    public function getName($name)
+    public function getName()
     {
-        $this->name = $name;
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDesc()
+    {
+        return $this->desc;
+    }
+
+    /**
+     * @param string $desc
+     */
+    public function setDesc($desc)
+    {
+        $this->desc = $desc;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * @param string $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
     }
 
 }

@@ -18,11 +18,11 @@ class DrinkTest extends \Symfony\Bundle\FrameworkBundle\Test\KernelTestCase
         $this->container = self::$kernel->getContainer();
     }
 
-    public function testHandler()
+    public function testName()
     {
 
 
-        $this->assertClassHasStaticAttribute('drinkName', 'cafe/Drink');
+        $this->assertClassHasStaticAttribute('name', 'cafe/Drink');
 
         $coffee = new \cafe\Drink();
 
@@ -62,6 +62,72 @@ class DrinkTest extends \Symfony\Bundle\FrameworkBundle\Test\KernelTestCase
         $this->assertEquals(
             $water->getName(),
             'water'
+        );
+
+    }
+
+    public function testDesc()
+    {
+
+
+        $this->assertClassHasStaticAttribute('desk', 'cafe/Drink');
+
+        $coffee = new \cafe\Drink();
+
+        $coffee->setDesc('bla bla bla');
+
+
+        $this->assertEquals(
+            $coffee->getDesk(),
+            'bla bla bla'
+        );
+
+        $juce = new \cafe\Drink();
+
+        $juce->setDesc('juce');
+
+
+        $this->assertEquals(
+            $juce->getDesc(),
+            'juce'
+        );
+
+        $tea = new \cafe\Drink();
+
+        $tea->setDesc('tea');
+
+
+        $this->assertEquals(
+            $tea->getDesc(),
+            'tea'
+        );
+
+        $water = new \cafe\Drink();
+
+        $water->setDesc('water');
+
+
+        $this->assertEquals(
+            $water->getDesc(),
+            'water'
+        );
+
+    }
+
+    public function testPrice()
+    {
+
+
+        $this->assertClassHasStaticAttribute('price', 'cafe/Drink');
+
+        $coffee = new \cafe\Drink();
+
+        $coffee->setPrice(100500);
+
+
+        $this->assertEquals(
+            $coffee->getDesk(),
+            100500
         );
 
     }

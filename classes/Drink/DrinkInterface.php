@@ -16,9 +16,31 @@ interface DrinkInterface
     public function setName($name);
 
     /**
-     * @param string $name
      * @return void
      */
-    public function getName($name);
+    public function getName();
+
+    /**
+     * @param string $desc
+     * @return void
+     */
+    public function setDesc($desc);
+
+    /**
+     * @return void
+     */
+    public function getDesc();
+
+    /**
+     * @param string $price
+     * @return void
+     */
+    public function setPrice($price);
+
+    /**
+     * @return void
+     */
+    public function getPrice();
+
 
 }
