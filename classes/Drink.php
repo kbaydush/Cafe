@@ -9,6 +9,7 @@
 
 
 namespace cafe;
+
 use cafe\Drink\DrinkInterface;
 
 class Drink implements DrinkInterface
@@ -25,6 +26,7 @@ class Drink implements DrinkInterface
 
     /**
      * @param string $name
+     *
      * @return void
      */
     public function setName($name)

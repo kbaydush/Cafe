@@ -14,5 +14,5 @@ define('ROOT_DIR', dirname(__FILE__));
 $composer_load = require_once(ROOT_DIR . '/plugins/autoload.php');
 
 $loader = new Autoloader();
-$loader->addNamespace("reseller", realpath(ROOT_DIR . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR));
+$loader->addNamespace("cafe", realpath(ROOT_DIR . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR));
 $loader->register();
