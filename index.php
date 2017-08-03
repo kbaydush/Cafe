@@ -9,27 +9,19 @@
 
 require_once dirname(__FILE__) . "/bootstrap.php";
 
-$coffee = new \cafe\Drink();
+$drink = new \cafe\Drink\Espresso();
 
-$coffee->setName('coffee');
-$coffee->setDesc('Bla bla bla');
-$coffee->setPrice(100500);
+$ingredients = $drink->getInitPropertyList();
 
-$juce = new \cafe\Drink();
+$sum = 0;
+foreach($ingredients as $key => $obj) {
 
-$juce->setName('juce');
-$juce->setDesc('Bla bla bla');
-$juce->setPrice(100500);
+    $sum += $obj->getCount() * $obj->getPrice();
 
-$tea = new \cafe\Drink();
+}
 
-$tea->setName('tea');
-$tea->setDesc('Bla bla bla');
-$tea->setPrice(100500);
+echo $sum;
 
-$water = new \cafe\Drink();
 
-$water->setName('water');
-$water->setDesc('Bla bla bla');
-$water->setPrice(100500);
+
 
