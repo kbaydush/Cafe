@@ -1,0 +1,25 @@
+{
+  "name": "wert2all/phpDataValue",
+  "description": "Data-Value template realization on PHP",
+  "version": "1.5",
+  "require-dev": {
+    "phpunit/phpunit-mock-objects": "@stable",
+    "phpunit/phpunit": "@stable",
+    "squizlabs/php_codesniffer": "@stable"
+  },
+  "archive": {
+    "exclude": [
+      "/tests"
+    ]
+  },
+  "autoload": {
+    "classmap": [
+      "classes/"
+    ]
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/"
+    ]
+  }
+}
